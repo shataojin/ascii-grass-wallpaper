@@ -84,6 +84,15 @@
         "text": "鼠标扰动",
         "type": "bool",
         "value": false
+      },
+      "watermarkopacity": {
+        "order": 9,
+        "text": "水印不透明度（0 为隐藏）",
+        "type": "slider",
+        "value": 35,
+        "min": 0,
+        "max": 100,
+        "step": 1
       }
     },
     "supportsaudioprocessing": false

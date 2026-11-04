@@ -1,11 +1,12 @@
 {
   "title": "ASCII 草浪 · 原视频运动版",
   "description": "按提供视频的原始运动节奏播放，仅裁去手机界面。30 FPS，590×824，无音频。",
-  "type": "video",
-  "file": "grass-reference.mp4",
+  "type": "web",
+  "file": "index.html",
   "preview": "poster.jpg",
   "contentrating": "Everyone",
   "visibility": "private",
   "version": 0,
-  "tags": ["Nature", "Abstract", "Relaxing"]
+  "tags": ["Nature", "Abstract", "Relaxing"],
+  "general": {"properties": {"watermarkopacity": {"order": 1, "text": "水印不透明度（0 为隐藏）", "type": "slider", "value": 35, "min": 0, "max": 100, "step": 1}}}
 }

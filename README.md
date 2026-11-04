@@ -15,11 +15,13 @@
 
 打开预览后可切换两个版本。视频默认保留原始画面比例；实时版适应横屏。H 显示设置，空格暂停。
 
+网页右下角显示 Sha Taojin 和 GitHub 头像，默认 35% 不透明度。点击“水印”调节不透明度，调到 0% 即可隐藏；选择会保存在当前浏览器中。Wallpaper Engine 的属性面板也提供相同调节器。
+
 ## Wallpaper Engine
 
 在 Releases 中下载所需包并解压：
 
-- `WallpaperEngine-Reference-Video.zip`：把 `grass-reference.mp4` 导入 Wallpaper Engine。选择“适应/保留比例”可看到完整竖幅，选择铺满会裁切画面。
+- `WallpaperEngine-Reference-Video.zip`：导入 `index.html` 为 Web 壁纸，可调节水印；也可直接导入 `grass-reference.mp4` 播放纯视频。保留比例可看到完整竖幅，选择铺满会裁切画面。
 - `WallpaperEngine-ASCII-Grass.zip`：在 Wallpaper Engine 中创建 Web 壁纸，导入包内 `index.html`。资源均已包含，可完全离线运行。
 
 也可以直接下载整个仓库：两个壁纸源文件分别位于 `docs/reference-video` 和 `docs/realtime`。

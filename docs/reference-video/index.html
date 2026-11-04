@@ -16,6 +16,6 @@ video.addEventListener('error',()=>{const error=document.getElementById('error')
 document.getElementById('pause').onclick=toggle;
 document.getElementById('fit').onclick=()=>{video.classList.toggle('fill');document.getElementById('fit').textContent=video.classList.contains('fill')?'保留原比例':'切换铺满';};
 document.getElementById('fullscreen').onclick=()=>{if(document.fullscreenElement)document.exitFullscreen();else document.documentElement.requestFullscreen?.();};
-document.addEventListener('keydown',e=>{if(e.code==='Space'){e.preventDefault();toggle();}if(e.code==='KeyH')controls.hidden=!controls.hidden;});
+document.addEventListener('keydown',e=>{if(e.target.matches('input,button,select'))return;if(e.code==='Space'){e.preventDefault();toggle();}if(e.code==='KeyH')controls.hidden=!controls.hidden;});
 video.play().catch(()=>{controls.hidden=false;});
-</script></body></html>
+</script><script src="watermark.js"></script></body></html>
