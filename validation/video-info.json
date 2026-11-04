@@ -1,0 +1,20 @@
+{
+  "sourceWidth": 592,
+  "sourceHeight": 1280,
+  "frameRate": 30,
+  "outputWidth": 590,
+  "outputHeight": 824,
+  "frames": 383,
+  "duration": 12.766666666666667,
+  "crop": {
+    "left": 0,
+    "top": 160,
+    "right": 590,
+    "bottom": 984
+  },
+  "audio": false,
+  "motion": "Original decoded frames, no generated movement, no speed change, no warping.",
+  "bestReturnFrame": 203,
+  "bestReturnSeconds": 6.766666666666667,
+  "loop": "The supplied clip is replayed in full; an exact seamless loop is not asserted for this source recording."
+}

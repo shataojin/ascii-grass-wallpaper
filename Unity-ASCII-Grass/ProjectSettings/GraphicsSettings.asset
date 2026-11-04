@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!30 &1
+GraphicsSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 16
+  m_CustomRenderPipeline: {fileID: 0}
+  m_AlwaysIncludedShaders:
+  - {fileID: 4800000, guid: 2c745dc7fff5176435763ad2f7684adc, type: 3}
+  - {fileID: 4800000, guid: 4496471fbafb062c0c7e8855423a9141, type: 3}
+  - {fileID: 4800000, guid: 6d47c1afd2f311c4151c6469ef9dcdfc, type: 3}
+  - {fileID: 4800000, guid: 4ee5cbc79df2d045e40578201675302e, type: 3}
+  - {fileID: 4800000, guid: 960b8b53f7a6632221fc8823855cb136, type: 3}
+  m_PreloadedShaders: []
+  m_LightsUseLinearIntensity: 0
+  m_LightsUseColorTemperature: 0

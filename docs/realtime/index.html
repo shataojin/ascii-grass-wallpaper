@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="流动的 ASCII 草浪。离线 GPU 动态壁纸。">
+  <title>ASCII 草浪</title>
+  <style>
+    *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#050905;color:#dde9ce;font-family:system-ui,"Microsoft YaHei",sans-serif}
+    canvas{display:block;width:100%;height:100%}button,input,select{font:inherit}button,select{background:#1c291d;color:#e5ecd8;border:1px solid #627451;border-radius:5px;padding:6px 10px;cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #d4e998;outline-offset:3px}
+    #controls{position:fixed;left:22px;bottom:22px;width:288px;padding:20px;background:rgba(9,17,10,.94);border:1px solid #5c7043;border-radius:10px;backdrop-filter:blur(12px)}
+    #controls[hidden],#message[hidden]{display:none}h1{font-size:17px;letter-spacing:.08em;font-weight:500;margin:0 0 14px}label{display:block;font-size:12px;margin:10px 0}label span{float:right;color:#b6c88e}input[type=range]{width:100%;accent-color:#c7df82;display:block;margin-top:5px}select{width:100%;margin-top:6px}.buttons{display:flex;gap:8px;margin-top:16px}.buttons button{flex:1}.hint{font-size:11px;color:#a2b594;margin:14px 0 0}
+    #message{position:fixed;inset:0;display:grid;place-content:center;background:#081009;text-align:center;padding:32px;white-space:pre-wrap}
+    @media(max-width:360px){#controls{left:12px;right:12px;bottom:12px;width:auto}}
+  </style>
+</head>
+<body>
+  <canvas id="grass" role="img" aria-label="黄绿色草叶成片随风转向，细密 ASCII 字符随草浪流动"></canvas>
+  <section id="controls" aria-label="草浪设置" hidden>
+    <h1>ASCII 草浪</h1>
+    <label>风速 <span id="speedValue">1.00</span><input id="speed" type="range" min="0" max="3" step="0.05" value="1"></label>
+    <label>风力 <span id="windValue">0.75</span><input id="wind" type="range" min="0" max="2" step="0.05" value="0.75"></label>
+    <label>字符密度 <span id="columnsValue">620</span><input id="columns" type="range" min="80" max="700" step="10" value="620"></label>
+    <label>ASCII 强度 <span id="asciiValue">0.64</span><input id="ascii" type="range" min="0" max="1" step="0.02" value="0.64"></label>
+    <label>亮度 <span id="exposureValue">1.08</span><input id="exposure" type="range" min="0.25" max="2" step="0.02" value="1.08"></label>
+    <label>构图<select id="composition"><option value="0">桌面铺满</option><option value="1">原图竖幅</option></select></label>
+    <label>画面<select id="reference"><option value="3">想象扩图 · 完整横幅</option></select></label>
+    <div class="buttons"><button id="pause" type="button">暂停</button><button id="hide" type="button">隐藏面板</button></div>
+    <p class="hint">H 显示设置 · 空格 暂停 · 双击 全屏</p>
+  </section>
+  <div id="message" role="status" aria-live="polite" hidden></div>
+  <script src="assets.js"></script>
+  <script src="grass.js"></script>
+</body>
+</html>

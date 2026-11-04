@@ -1,0 +1,2 @@
+PASS: Runtime and editor C# compile against Unity 6000.3.21 installed reference assemblies.
+LIMIT: Unity editor startup blocked by existing license validation (exit 198); scenes and HLSL shaders have not been tested inside Unity.

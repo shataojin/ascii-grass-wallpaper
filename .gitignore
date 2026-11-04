@@ -1,0 +1,14 @@
+**/Library/
+**/Temp/
+**/Obj/
+**/Logs/
+**/UserSettings/
+**/Builds/
+*.csproj
+*.sln
+.DS_Store
+Thumbs.db
+.tools/
+*.log
+*.rsp
+*.dll

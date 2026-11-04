@@ -1,0 +1,91 @@
+{
+  "title": "ASCII 草浪 · Flowing Grass",
+  "description": "从黄绿色 ASCII 草浪画面扩展成完整横幅。草根固定，草叶随区域风向成片转向，叶尖轻微错落摆动；12 秒无缝周期，完全离线。H 显示预览设置。",
+  "type": "web",
+  "file": "index.html",
+  "preview": "preview.png",
+  "contentrating": "Everyone",
+  "tags": [
+    "Nature",
+    "Abstract",
+    "Relaxing"
+  ],
+  "visibility": "private",
+  "version": 0,
+  "general": {
+    "properties": {
+      "speed": {
+        "order": 1,
+        "text": "风速",
+        "type": "slider",
+        "value": 1,
+        "min": 0,
+        "max": 3,
+        "fraction": true,
+        "precision": 2
+      },
+      "wind": {
+        "order": 2,
+        "text": "风力",
+        "type": "slider",
+        "value": 0.75,
+        "min": 0,
+        "max": 2,
+        "fraction": true,
+        "precision": 2
+      },
+      "columns": {
+        "order": 3,
+        "text": "字符密度",
+        "type": "slider",
+        "value": 620,
+        "min": 80,
+        "max": 700,
+        "step": 10
+      },
+      "ascii": {
+        "order": 4,
+        "text": "ASCII 强度",
+        "type": "slider",
+        "value": 0.64,
+        "min": 0,
+        "max": 1,
+        "fraction": true,
+        "precision": 2
+      },
+      "exposure": {
+        "order": 5,
+        "text": "亮度",
+        "type": "slider",
+        "value": 1.08,
+        "min": 0.25,
+        "max": 2,
+        "fraction": true,
+        "precision": 2
+      },
+      "composition": {
+        "order": 6,
+        "text": "构图",
+        "type": "combo",
+        "value": 0,
+        "options": [
+          {
+            "label": "桌面铺满",
+            "value": 0
+          },
+          {
+            "label": "原图竖幅",
+            "value": 1
+          }
+        ]
+      },
+      "interaction": {
+        "order": 8,
+        "text": "鼠标扰动",
+        "type": "bool",
+        "value": false
+      }
+    },
+    "supportsaudioprocessing": false
+  }
+}

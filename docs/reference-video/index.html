@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ASCII 草浪 · 原视频运动版</title>
+<style>*{box-sizing:border-box}html,body{margin:0;background:#000;color:#e0e9cd;width:100%;height:100%;overflow:hidden;font-family:system-ui,"Microsoft YaHei",sans-serif}video{width:100%;height:100%;display:block;object-fit:contain}video.fill{object-fit:cover}#controls{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:8px;padding:8px;background:#101910df;border:1px solid #536641;border-radius:9px;white-space:nowrap}#controls[hidden]{display:none}button{padding:8px 12px;border:1px solid #60724c;border-radius:5px;background:#1a271b;color:#e0e9cd;font:inherit;cursor:pointer;font-size:13px}button:focus-visible{outline:2px solid #cfe898;outline-offset:3px}#error{position:fixed;inset:0;display:grid;place-content:center;background:#000a;text-align:center;white-space:pre-wrap}#error[hidden]{display:none}</style></head>
+<body>
+<video id="video" src="grass-reference.mp4" poster="poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="按原录制节奏播放的 ASCII 草浪"></video>
+<div id="controls" hidden><button id="pause">暂停</button><button id="fit">切换铺满</button><button id="fullscreen">全屏</button></div>
+<div id="error" role="status" hidden></div>
+<script>
+const video=document.getElementById('video'),controls=document.getElementById('controls');
+controls.hidden=!new URLSearchParams(location.search).has('ui');
+function toggle(){if(video.paused)video.play().catch(()=>{});else video.pause();}
+video.addEventListener('play',()=>document.getElementById('pause').textContent='暂停');
+video.addEventListener('pause',()=>document.getElementById('pause').textContent='播放');
+video.addEventListener('error',()=>{const error=document.getElementById('error');error.hidden=false;error.textContent='视频无法读取，请完整保留此文件夹。';});
+document.getElementById('pause').onclick=toggle;
+document.getElementById('fit').onclick=()=>{video.classList.toggle('fill');document.getElementById('fit').textContent=video.classList.contains('fill')?'保留原比例':'切换铺满';};
+document.getElementById('fullscreen').onclick=()=>{if(document.fullscreenElement)document.exitFullscreen();else document.documentElement.requestFullscreen?.();};
+document.addEventListener('keydown',e=>{if(e.code==='Space'){e.preventDefault();toggle();}if(e.code==='KeyH')controls.hidden=!controls.hidden;});
+video.play().catch(()=>{controls.hidden=false;});
+</script></body></html>

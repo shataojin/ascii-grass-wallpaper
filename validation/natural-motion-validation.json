@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3090 (0x00002204) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.15.6094)",
+  "checks": {
+    "four_shader_programs_compile": true,
+    "frame_is_nonblank": true,
+    "grass_motion_is_visible": true,
+    "twelve_second_loop_closes": true,
+    "zero_wind_is_still": true,
+    "all_sampled_root_vertices_stay_fixed": true,
+    "tips_turn_independently_of_roots": true,
+    "neighboring_blades_share_direction": true,
+    "separate_regions_have_different_directions": true
+  },
+  "metrics": {
+    "motion_pixel_difference": 0.04914894700050354,
+    "loop_pixel_difference": 0.0,
+    "zero_wind_max_pixel_difference": 0.0,
+    "root_vertex_max_displacement": 0.0,
+    "tip_vertex_mean_displacement": 0.016359983012080193,
+    "neighbor_direction_rms_radians": 0.0073692329314529,
+    "separate_region_direction_rms_radians": 0.40497972569023244,
+    "gpu_render_ms": [
+      0.8933999924920499,
+      1.1789000127464533,
+      1.014399982523173
+    ]
+  },
+  "limits": "Offline ANGLE rendering validates the exact shipped GLSL, not browser DOM/property integration or Unity HLSL compilation."
+}

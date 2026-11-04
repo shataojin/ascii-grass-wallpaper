@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="ASCII 草浪：原视频运动版与实时 GPU 草叶。"><title>ASCII 草浪</title>
+<style>*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;background:#070b07;color:#dfebca;font-family:system-ui,"Microsoft YaHei",sans-serif}body{display:flex;flex-direction:column}header{min-height:64px;display:flex;align-items:center;gap:22px;padding:12px 24px;border-bottom:1px solid #293522;background:#0d140d}h1{font-size:17px;font-weight:500;letter-spacing:.08em;white-space:nowrap;margin:0}nav{display:flex;align-items:center;gap:7px;flex-wrap:wrap}button,a{font:inherit;font-size:13px}button{padding:8px 12px;background:transparent;color:#9dab91;border:1px solid transparent;border-radius:5px;cursor:pointer}button[aria-pressed=true]{background:#26351e;border-color:#748751;color:#eff5de}a{color:#bdce9e;text-decoration:none;padding:8px}a:hover{text-decoration:underline}.links{margin-left:auto;display:flex;white-space:nowrap}main{flex:1;min-height:0;position:relative}iframe{border:0;width:100%;height:100%;background:#000;display:block}button:focus-visible,a:focus-visible{outline:2px solid #cfe898;outline-offset:3px}@media(max-width:680px){header{gap:10px;padding:10px 12px;flex-wrap:wrap}h1{flex:1}nav{order:3;flex-basis:100%}button{flex:1}.links{gap:0}}</style></head>
+<body>
+<header><h1>ASCII 草浪</h1><nav aria-label="选择版本"><button data-mode="reference-video" aria-pressed="true">原视频运动版</button><button data-mode="realtime" aria-pressed="false">实时草叶版</button></nav><div class="links"><a href="https://github.com/shataojin/ascii-grass-wallpaper" target="_blank" rel="noopener">GitHub</a><a href="https://github.com/shataojin/ascii-grass-wallpaper/releases/latest" target="_blank" rel="noopener">下载</a></div></header>
+<main><iframe id="viewer" src="reference-video/index.html?ui=1" title="ASCII 草浪动态画面" allow="autoplay; fullscreen" allowfullscreen></iframe></main>
+<script>
+const viewer=document.getElementById('viewer');
+function mode(value){if(!['reference-video','realtime'].includes(value))value='reference-video';for(const b of document.querySelectorAll('[data-mode]'))b.setAttribute('aria-pressed',String(b.dataset.mode===value));viewer.src=value+'/index.html?'+(value==='realtime'?'controls=1':'ui=1');history.replaceState(null,'','#'+value);}
+for(const button of document.querySelectorAll('[data-mode]'))button.addEventListener('click',()=>mode(button.dataset.mode));
+if(location.hash.slice(1)==='realtime')mode('realtime');
+</script></body></html>
