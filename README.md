@@ -36,13 +36,4 @@
 
 在 Play 模式按 H 打开设置、空格暂停、F11 切换全屏。视频位于 `Assets/StreamingAssets/VideoReference`。导入其他项目时，可使用 Release 附带的 `ASCII-Grass.unitypackage`。
 
-## 运动与验证
-
-版本2使用分区方向场驱动弯曲草叶，源图颜色固定在草根上。草根不平移，各区域转向相位不同；叶尖有轻微独立摆动。循环周期为 12 秒，风速 1 时对应 12 秒一轮。
-
-实际 GPU 检查结果见 `validation/natural-motion-validation.json`：四个 GLSL 程序编译通过，抽样草根顶点保持固定，叶尖有运动，邻域方向连续，区域之间方向不同；零风力时帧一致，12 秒首尾帧一致。Unity C# 已对安装的 Unity 参考程序集编译通过。当前环境的 Unity 编辑器许可证校验失败，因此尚未在 Unity 编辑器内验证 HLSL 和视频播放。
-
-版本1使用内置 `image_gen.imagegen` 生成的整幅草地作为静态采色来源，绘制 160000 根固定草根的弯曲草叶。加长的叶尖沿区域方向场成片转向，叶片明暗随朝向变化，普通网页预览尺寸下也能看见运动。采用 10 秒解析周期、半浮点风场和超采样来平滑运动。字符形状由静态采色固定，随草叶方向平缓转动。完整输出为 1920×1080、30 FPS、300 帧，无音频。
-
-版本1的草根、叶尖速度/加速度、字形稳定和首尾循环检查见 `validation/version1-visible-validation.json`；编码后的逐帧变化和循环衔接检查见 `validation/version1-visible-encoded-validation.json`。检查直接读取分布在全画面的 256 根草叶的实际 GPU 顶点和片段输出，并要求两秒内叶尖位移的第 75 百分位至少为 10 像素、640×360 预览的平均 RGB 变化至少为 5/255，同时约束速度、加速度和编码后的帧间突跳。生成底图的提示词见 `docs/reference-video/image-generation-prompt.txt`。
 
