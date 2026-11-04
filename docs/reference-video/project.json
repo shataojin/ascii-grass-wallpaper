@@ -1,9 +1,9 @@
 {
   "title": "ASCII 草浪 · 版本1",
-  "description": "使用内置图像生成扩展为 1920×1080 横屏，中央保留原视频运动，两侧跟随视频的局部运动。30 FPS，无音频，可调水印。",
+  "description": "整幅画面使用内置图像生成统一重绘，以相同字符网格和同一运动处理输出为 1920×1080 横屏。30 FPS，无音频，可调水印。",
   "type": "web",
   "file": "index.html",
-  "preview": "poster-expanded.jpg",
+  "preview": "poster-unified.jpg",
   "contentrating": "Everyone",
   "visibility": "private",
   "version": 0,

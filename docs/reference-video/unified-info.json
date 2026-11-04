@@ -1,0 +1,35 @@
+{
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "frames": 383,
+  "duration": 12.766666666666667,
+  "expansionTool": "built-in image_gen.imagegen",
+  "rendering": "One jointly generated full-frame texture, one uniform 720x308 ASCII grid and one source-measured motion pipeline.",
+  "originalVideoOverlay": false,
+  "regionBlending": false,
+  "sourceVideoUse": "Motion estimation only; original pixels are not composited into the center.",
+  "glError": 0,
+  "threeRegionMotionChecks": [
+    {
+      "frame": 0,
+      "leftMeanDifference": 0.0,
+      "centerMeanDifference": 0.0,
+      "rightMeanDifference": 0.0
+    },
+    {
+      "frame": 90,
+      "leftMeanDifference": 8.210518836975098,
+      "centerMeanDifference": 10.086358070373535,
+      "rightMeanDifference": 10.771689414978027
+    },
+    {
+      "frame": 210,
+      "leftMeanDifference": 17.540613174438477,
+      "centerMeanDifference": 18.42976188659668,
+      "rightMeanDifference": 17.496543884277344
+    }
+  ],
+  "bytes": 45950521,
+  "passed": true
+}
