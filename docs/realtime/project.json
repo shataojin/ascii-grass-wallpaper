@@ -1,5 +1,5 @@
 {
-  "title": "ASCII 草浪 · Flowing Grass",
+  "title": "ASCII 草浪 · 版本2",
   "description": "从黄绿色 ASCII 草浪画面扩展成完整横幅。草根固定，草叶随区域风向成片转向，叶尖轻微错落摆动；12 秒无缝周期，完全离线。H 显示预览设置。",
   "type": "web",
   "file": "index.html",

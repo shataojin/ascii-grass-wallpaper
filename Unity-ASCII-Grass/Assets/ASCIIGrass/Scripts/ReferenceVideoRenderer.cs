@@ -9,7 +9,7 @@ namespace ASCIIGrass
     {
         public Shader displayShader;
         public Texture2D poster;
-        public string relativeVideoPath = "VideoReference/grass-reference.mp4";
+        public string relativeVideoPath = "VideoReference/grass-expanded.mp4";
         public bool fillScreen;
         public bool showControls;
         VideoPlayer player;
@@ -20,7 +20,7 @@ namespace ASCIIGrass
         {
             if (!displayShader) displayShader = Shader.Find("ASCIIGrass/ReferenceVideo");
             display = new Material(displayShader);
-            frames = new RenderTexture(590,824,0,RenderTextureFormat.ARGB32) { name="Original grass video frames",filterMode=FilterMode.Bilinear };
+            frames = new RenderTexture(1920,1080,0,RenderTextureFormat.ARGB32) { name="Version 1 expanded video frames",filterMode=FilterMode.Bilinear };
             frames.Create();
             player = gameObject.AddComponent<VideoPlayer>();
             player.playOnAwake = false; player.source = VideoSource.Url;
@@ -44,7 +44,7 @@ namespace ASCIIGrass
         void OnRenderImage(RenderTexture source,RenderTexture destination)
         {
             if (!display) { Graphics.Blit(source,destination); return; }
-            display.SetVector("_Layout",new Vector4(source.width/(float)source.height,590f/824f,fillScreen?1:0,0));
+            display.SetVector("_Layout",new Vector4(source.width/(float)source.height,16f/9f,fillScreen?1:0,0));
             Texture image = player && player.isPrepared && player.frame >= 0 ? frames : poster;
             if (image) Graphics.Blit(image,destination,display); else Graphics.Blit(source,destination);
         }
@@ -52,7 +52,7 @@ namespace ASCIIGrass
         {
             if (!showControls) return;
             GUILayout.BeginArea(new Rect(18,18,260,130),GUI.skin.box);
-            GUILayout.Label("ASCII GRASS / Original video motion");
+            GUILayout.Label("ASCII GRASS / Version 1");
             if (GUILayout.Button(player && player.isPlaying ? "Pause" : "Play")) Toggle();
             fillScreen=GUILayout.Toggle(fillScreen,"Fill screen (crops the portrait)");
             GUILayout.Label("H: controls / Space: pause / F11: fullscreen");

@@ -181,7 +181,7 @@ namespace ASCIIGrass
             if (!showControls) return;
             GUI.color = new Color(1f,1f,1f,.94f);
             GUILayout.BeginArea(new Rect(18,18,300,350), GUI.skin.box);
-            GUILayout.Label("ASCII GRASS / 160,000 GPU blades");
+            GUILayout.Label("ASCII GRASS / Version 2 / 160,000 GPU blades");
             GUILayout.Space(8);
             paused = GUILayout.Toggle(paused, "Pause / Space");
             pointerInteraction = GUILayout.Toggle(pointerInteraction, "Pointer wind");

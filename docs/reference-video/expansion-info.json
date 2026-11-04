@@ -1,0 +1,31 @@
+{
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "frames": 383,
+  "duration": 12.766666666666667,
+  "expansionTool": "built-in image_gen.imagegen",
+  "center": "Original source-video frames, preserved timing; feathering is restricted to the join.",
+  "newSides": "Generated image, animated by measured source-video optical flow. No mirrored image content.",
+  "sourceVideoPreserved": true,
+  "glError": 0,
+  "sideMotionChecks": [
+    {
+      "frame": 0,
+      "leftSideMeanDifference": 0.0,
+      "rightSideMeanDifference": 0.0
+    },
+    {
+      "frame": 90,
+      "leftSideMeanDifference": 7.191400527954102,
+      "rightSideMeanDifference": 9.757135391235352
+    },
+    {
+      "frame": 210,
+      "leftSideMeanDifference": 14.853325843811035,
+      "rightSideMeanDifference": 16.58116340637207
+    }
+  ],
+  "bytes": 19933581,
+  "passed": true
+}

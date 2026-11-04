@@ -1,9 +1,9 @@
 {
-  "title": "ASCII 草浪 · 原视频运动版",
-  "description": "按提供视频的原始运动节奏播放，仅裁去手机界面。30 FPS，590×824，无音频。",
+  "title": "ASCII 草浪 · 版本1",
+  "description": "使用内置图像生成扩展为 1920×1080 横屏，中央保留原视频运动，两侧跟随视频的局部运动。30 FPS，无音频，可调水印。",
   "type": "web",
   "file": "index.html",
-  "preview": "poster.jpg",
+  "preview": "poster-expanded.jpg",
   "contentrating": "Everyone",
   "visibility": "private",
   "version": 0,
