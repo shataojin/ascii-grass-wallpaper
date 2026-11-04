@@ -1,9 +1,9 @@
 {
   "title": "ASCII 草浪 · 版本1",
-  "description": "草根固定、叶尖平滑成片转向，稳定字符形状。16 秒循环，1920×1080，30 FPS，无音频，可调水印。",
+  "description": "草根固定，草叶明显成片转向，明暗随朝向变化，稳定字符形状。10 秒循环，1920×1080，30 FPS，无音频，可调水印。",
   "type": "web",
   "file": "index.html",
-  "preview": "poster-smooth.jpg",
+  "preview": "poster-visible.jpg",
   "contentrating": "Everyone",
   "visibility": "private",
   "version": 0,

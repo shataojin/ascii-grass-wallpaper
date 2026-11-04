@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "checks": {
+    "frame_count_300": true,
+    "full_hd": true,
+    "thirty_fps": true,
+    "no_audio": true,
+    "fast_start": true,
+    "nonblank": true,
+    "no_large_frame_jump": true,
+    "loop_step_matches_normal_motion": true,
+    "motion_visible_within_two_seconds_at_preview_size": true
+  },
+  "frames": 300,
+  "duration": 10,
+  "width": 1920,
+  "height": 1080,
+  "fps": "30/1",
+  "bytes": 75815069,
+  "metrics": {
+    "median_frame_change": 2.8496451377868652,
+    "p95_frame_change": 3.4808398962020872,
+    "maximum_frame_change": 3.6913206577301025,
+    "loop_boundary_change": 3.2861926555633545,
+    "preview_rgb_change_two_seconds": 9.619348526000977
+  },
+  "snapshots": [
+    {
+      "frame": 0,
+      "greenMean": 81.06659673996914,
+      "changeFromStart": 0.0
+    },
+    {
+      "frame": 30,
+      "greenMean": 82.36180459104938,
+      "changeFromStart": 11.174857139587402
+    },
+    {
+      "frame": 60,
+      "greenMean": 80.68247395833333,
+      "changeFromStart": 13.187921524047852
+    },
+    {
+      "frame": 150,
+      "greenMean": 81.09797646604939,
+      "changeFromStart": 19.16669464111328
+    },
+    {
+      "frame": 299,
+      "greenMean": 80.95489631558642,
+      "changeFromStart": 3.2861926555633545
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "checks": {
+    "sampled_roots_stay_fixed": true,
+    "tip_step_is_smooth": true,
+    "tip_acceleration_is_smooth": true,
+    "tips_visibly_turn_within_two_seconds": true,
+    "glyph_identity_does_not_flicker": true,
+    "pose_loop_closes": true,
+    "rendered_loop_closes": true,
+    "zero_wind_is_still": true,
+    "motion_visible_at_normal_preview_size": true,
+    "first_frame_reconstruction_is_deterministic": true
+  },
+  "metrics": {
+    "sampled_root_max_displacement": 0.0,
+    "max_tip_pixels_per_frame": 1.7295022010803223,
+    "max_tip_acceleration_pixels_per_frame2": 0.14763392508029938,
+    "tip_displacement_two_seconds_p75_pixels": 18.7342472076416,
+    "preview_rgb_change_two_seconds": 9.28171443939209,
+    "glyph_index_max_change": 0,
+    "pose_loop_max_error": 0.0,
+    "loop_max_pixel_error": 0,
+    "zero_wind_max_pixel_error": 0,
+    "first_frame_reconstruction_calibration_error": 0,
+    "mean_frame_difference": 2.5334463187284695,
+    "maximum_frame_difference": 3.2242014408111572,
+    "loop_boundary_frame_difference": 2.9149343967437744
+  },
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "frames": 300,
+  "duration": 10,
+  "bytes": 75815069,
+  "motionModel": "160000 fixed-root curved blades with larger coherent turns, orientation-dependent lighting and a 10-second analytic cycle. No optical flow or texture-coordinate deformation.",
+  "asciiModel": "Stable glyph identities from static root colors; supersampled grass geometry.",
+  "codecModel": "Calibrated reconstruction base and increased loop-end precision.",
+  "limits": "GPU sampling covers 256 blade instances distributed across the field and 16 phase samples. Unity editor playback remains unverified because of the existing license issue."
+}

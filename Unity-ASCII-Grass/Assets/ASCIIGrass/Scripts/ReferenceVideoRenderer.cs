@@ -9,7 +9,7 @@ namespace ASCIIGrass
     {
         public Shader displayShader;
         public Texture2D poster;
-        public string relativeVideoPath = "VideoReference/grass-smooth.mp4";
+        public string relativeVideoPath = "VideoReference/grass-visible.mp4";
         public bool fillScreen;
         public bool showControls;
         VideoPlayer player;
