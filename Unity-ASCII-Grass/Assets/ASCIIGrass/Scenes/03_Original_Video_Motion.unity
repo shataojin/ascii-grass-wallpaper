@@ -127,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier:
   displayShader: {fileID: 4800000, guid: 960b8b53f7a6632221fc8823855cb136, type: 3}
   poster: {fileID: 2800000, guid: c4a809010863e2a80b6e3ec3a77c7839, type: 3}
-  relativeVideoPath: VideoReference/grass-unified.mp4
+  relativeVideoPath: VideoReference/grass-smooth.mp4
   fillScreen: 0
   showControls: 0
 --- !u!1660057539 &9223372036854775807

@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "checks": {
+    "sampled_roots_stay_fixed": true,
+    "tip_step_below_half_pixel": true,
+    "tip_acceleration_below_tenth_pixel": true,
+    "glyph_identity_does_not_flicker": true,
+    "pose_loop_closes": true,
+    "rendered_loop_closes": true,
+    "zero_wind_is_still": true,
+    "first_frame_reconstruction_is_deterministic": true
+  },
+  "metrics": {
+    "sampled_root_max_displacement": 0.0,
+    "max_tip_pixels_per_frame": 0.01897309720516205,
+    "max_tip_acceleration_pixels_per_frame2": 0.0008243768243119121,
+    "glyph_index_max_change": 0,
+    "pose_loop_max_error": 0.0,
+    "loop_max_pixel_error": 0,
+    "zero_wind_max_pixel_error": 0,
+    "first_frame_reconstruction_calibration_error": 0,
+    "mean_frame_difference": 0.5182098078080657,
+    "maximum_frame_difference": 0.6505449414253235,
+    "loop_boundary_frame_difference": 0.5567148923873901
+  },
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "frames": 480,
+  "duration": 16,
+  "bytes": 68212267,
+  "motionModel": "160000 fixed-root curved blades, smooth regional direction changes, a 16-second analytic cycle, and half-float wind. No optical flow or texture-coordinate deformation.",
+  "asciiModel": "Stable glyph identities from static root colors; supersampled grass geometry.",
+  "codecModel": "Stable quantization, a calibrated reconstruction base, and gradually increased end-of-loop precision preserve character detail across the loop.",
+  "limits": "GPU sampling validates 256 blade instances across 16 phase samples. Unity editor playback remains unverified because of the existing license issue."
+}

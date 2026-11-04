@@ -1,14 +1,14 @@
 # ASCII 草浪
 
-黄绿色 ASCII 草浪的两种呈现：版本1为生成扩图视频，版本2为实时 GPU 草叶。
+黄绿色 ASCII 草浪的两种呈现：版本1为平滑循环视频，版本2为实时 GPU 草叶。
 
 [打开在线预览](https://shataojin.github.io/ascii-grass-wallpaper/) · [下载壁纸和 Unity 工程](https://github.com/shataojin/ascii-grass-wallpaper/releases/latest)
 
-![版本1：统一横屏画面](docs/reference-video/poster-unified.jpg)
+![版本1：平滑循环草浪](docs/reference-video/poster-smooth.jpg)
 
 | 版本 | 呈现方式 | 使用场景 |
 | --- | --- | --- |
-| 版本1 | 内置图像生成统一重绘整幅画面，再应用相同 ASCII 网格与源视频实测运动，输出 1920×1080 | 横屏视频壁纸、Unity VideoPlayer |
+| 版本1 | 以生成底图为草叶采色，固定草根、平滑区域转向，稳定字形，16 秒循环 | 横屏视频壁纸、Unity VideoPlayer |
 | 版本2 | 160000 根 GPU 草叶，草根固定，相邻草叶共享风向，区域错开转向，字符跟随方向场 | 可调整风速和亮度的动态桌面、Unity 场景 |
 
 ## 在线预览
@@ -21,7 +21,7 @@
 
 在 Releases 中下载所需包并解压：
 
-- `Version1-Wallpaper.zip`：导入 `index.html` 为 Web 壁纸，可调节水印；也可直接导入 `grass-unified.mp4` 播放横屏视频。
+- `Version1-Wallpaper.zip`：导入 `index.html` 为 Web 壁纸，可调节水印；也可直接导入 `grass-smooth.mp4` 播放横屏视频。
 - `Version2-Wallpaper.zip`：在 Wallpaper Engine 中创建 Web 壁纸，导入包内 `index.html`。资源均已包含，可完全离线运行。
 
 也可以直接下载整个仓库：两个壁纸源文件分别位于 `docs/reference-video` 和 `docs/realtime`。
@@ -42,12 +42,12 @@
 
 实际 GPU 检查结果见 `validation/natural-motion-validation.json`：四个 GLSL 程序编译通过，抽样草根顶点保持固定，叶尖有运动，邻域方向连续，区域之间方向不同；零风力时帧一致，12 秒首尾帧一致。Unity C# 已对安装的 Unity 参考程序集编译通过。当前环境的 Unity 编辑器许可证校验失败，因此尚未在 Unity 编辑器内验证 HLSL 和视频播放。
 
-版本1使用内置 `image_gen.imagegen` 对整幅横屏草地统一重绘，全画面采用相同草叶尺度、720×308 字符网格、色彩处理和运动渲染。原视频用于测量局部运动节奏，中央与两侧均使用同一张生成纹理和同一渲染流程。完整输出为 1920×1080、30 FPS、383 帧，无音频。重新播放时可能出现轻微衔接变化，未将它标为逐像素无缝循环。
+版本1使用内置 `image_gen.imagegen` 生成的整幅草地作为静态采色来源，绘制 160000 根固定草根的弯曲草叶。叶尖以较缓的区域方向场转向，采用 16 秒解析周期、半浮点风场和超采样来平滑运动。字符形状由静态采色固定，随草叶方向平缓转动。画面不使用光流位移或随时间变形的纹理坐标。完整输出为 1920×1080、30 FPS、480 帧，无音频。
 
-版本1统一渲染与三区域动态检查见 `validation/version1-unified-validation.json`，生成提示词见 `docs/reference-video/image-generation-prompt.txt`。
+版本1的草根、叶尖速度/加速度、字形稳定和首尾循环检查见 `validation/version1-smooth-validation.json`；编码后的逐帧变化和循环衔接检查见 `validation/version1-smooth-encoded-validation.json`。检查直接读取实际 GPU 顶点和片段输出。生成底图的提示词见 `docs/reference-video/image-generation-prompt.txt`。
 
 ## 素材说明
 
-参考画面原作者标注为“宇森 Yusen”，由使用者提供截图和录制视频。版本1与版本2的横向底图均使用内置图像生成工具完成。版本1统一生成整幅视频画面并参考录制的局部运动，版本2使用生成底图驱动程序草叶。
+参考画面原作者标注为“宇森 Yusen”，由使用者提供截图和录制视频。版本1与版本2的横向底图均使用内置图像生成工具完成。两个版本均参考原画面的成片转向特征；版本1离线渲染为较缓的循环视频，版本2提供实时风力与字符参数调节。
 
 本仓库不包含原始手机截图或完整手机录屏。素材权益归相应权利人；发布不构成对原始参考素材的额外授权。

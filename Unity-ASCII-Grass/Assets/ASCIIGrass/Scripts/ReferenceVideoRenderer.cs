@@ -9,7 +9,7 @@ namespace ASCIIGrass
     {
         public Shader displayShader;
         public Texture2D poster;
-        public string relativeVideoPath = "VideoReference/grass-unified.mp4";
+        public string relativeVideoPath = "VideoReference/grass-smooth.mp4";
         public bool fillScreen;
         public bool showControls;
         VideoPlayer player;
@@ -54,7 +54,7 @@ namespace ASCIIGrass
             GUILayout.BeginArea(new Rect(18,18,260,130),GUI.skin.box);
             GUILayout.Label("ASCII GRASS / Version 1");
             if (GUILayout.Button(player && player.isPlaying ? "Pause" : "Play")) Toggle();
-            fillScreen=GUILayout.Toggle(fillScreen,"Fill screen (crops the portrait)");
+            fillScreen=GUILayout.Toggle(fillScreen,"Fill screen");
             GUILayout.Label("H: controls / Space: pause / F11: fullscreen");
             GUILayout.EndArea();
         }
